@@ -7,6 +7,13 @@
     Listagem dos Usuários
     (<a href="{{ route('users.create') }}">+</a>)
 </h3>
+<form action="{{ route('users.index') }}" method="get">
+    <input type="text" name="search" placeholder="Pesquisar:">
+    <button>
+       Pesquisar
+    </button>
+
+</form>
     <h3>
         <ul>
             
@@ -14,6 +21,7 @@
             <li>
                 {{$user->name}} -
                 {{$user->email}}   
+                | <a href="{{ route('users.edit', $user->id) }}">Editar</a>
                 | <a href="{{ route('users.show', $user->id) }}">Detalhes</a>
             </li>    
          @endforeach

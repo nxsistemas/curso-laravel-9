@@ -3,7 +3,7 @@
 @section('title', 'Listagem do Usuário')
 
 @section('content')
-<h3>Listagem do Usuário - {{ $users->name }}</h3>
+<h3>Listagem do Usuário - {{ $users->name }} (<a href="{{ route('users.index', $users->id) }}">Voltar</a>)</h3>
 
 <ul>
     <li>{{ $users->name }}</li> 
